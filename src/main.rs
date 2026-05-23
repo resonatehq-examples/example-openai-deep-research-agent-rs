@@ -165,9 +165,13 @@ async fn prompt(args: PromptArgs) -> Result<Message> {
         ]);
     }
 
+    let base_url = std::env::var("OPENAI_BASE_URL")
+        .unwrap_or_else(|_| "https://api.openai.com/v1".into());
+    let url = format!("{}/chat/completions", base_url.trim_end_matches('/'));
+
     let client = reqwest::Client::new();
     let resp = client
-        .post("https://api.openai.com/v1/chat/completions")
+        .post(&url)
         .bearer_auth(api_key)
         .json(&body)
         .send()
