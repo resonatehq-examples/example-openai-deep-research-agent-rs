@@ -1044,7 +1044,8 @@ dependencies = [
 [[package]]
 name = "resonate-sdk"
 version = "0.4.0"
-source = "git+https://github.com/resonatehq/resonate-sdk-rs?tag=0.4.0#ecb4e2674fe6dcf301c0355cea029743a234fd90"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "463c32ca68eff34fb2a125ef7e70cba55a7987a20e494546bf48736e7208cd7c"
 dependencies = [
  "async-trait",
  "base64",
@@ -1064,7 +1065,8 @@ dependencies = [
 [[package]]
 name = "resonate-sdk-macros"
 version = "0.1.0"
-source = "git+https://github.com/resonatehq/resonate-sdk-rs?tag=0.4.0#ecb4e2674fe6dcf301c0355cea029743a234fd90"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "44421aec4e413410614f7a02436fa65c4571d966d61885fc2360ca3eca078069"
 dependencies = [
  "proc-macro-crate",
  "proc-macro2",
