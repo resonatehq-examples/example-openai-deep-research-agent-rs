@@ -10,7 +10,7 @@ name = "research"
 path = "src/main.rs"
 
 [dependencies]
-resonate = { package = "resonate-sdk", version = "0.4.0" }
+resonate = { package = "resonate-sdk", version = "0.5.0" }
 tokio = { version = "1", features = ["full"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
