@@ -109,8 +109,7 @@ async fn research(ctx: &Context, topic: String, depth: i32) -> Result<String> {
 
                     let handle = ctx
                         .run(research, (subtopic, depth - 1))
-                        .spawn()
-                        .await?;
+                        .spawn()?;
                     handles.push((tool_call, handle));
                 }
             }
